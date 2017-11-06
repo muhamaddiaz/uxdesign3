@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(40, 40, 40);
+  z-index: -5;
+}
+
+.navbar-menu {
+  position: relative;
+  height: 100%;
+  opacity: 0;
+  width: 20%;
+  transform: scale(1);
+  transform-origin: right;
+  overflow: hidden;
+}
+
+.user-profile {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+}
+
+.img-ct-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.img-ct-circle img {
+  width: 100%;
+}
+
+.user-name {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.navbar-menu ul li {
+  margin: 0;
+  padding: 10px;
+  padding-left: 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-menu ul li:hover {
+  cursor: pointer;
+}
+
+.nav-menu-header {
+  color: white;
+  font-size: 2.5rem !important;
+  padding: 15px;
+}
+
+.main-content {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  transition-duration: .5s;
+}
+
+.main-content-active {
+  transform: translateX(10%) scale(.8);
+  overflow: hidden;
+}
+
+.toggle-nav {
+
+}
+
+.navbar-ct {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.greet-box {
+  background-image: url(assets/concert.jpg);
+  background-position: bottom;
+  text-align: center;
+  padding: 150px;
+}
+
+.greet-text {
+  color: white;
+  font-size: 4rem;
+}
+
+.greet-text .sec-text {
+  font-size: 1.5rem;
+}
+
+.article-content {
+  height: 50vh;
+  background-color: black;
+}
+
+.top-picks {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.tp-text {
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.tp-card {
+  width: 25%;
+  padding: 5px;
+  padding-top: 10px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tp-img-ct {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.tp-img-ct img {
+  width: 100%;
+  height: 250px;
+}
+
+.tp-desc {
+  position: absolute;
+  bottom: 5px;
+  color: white;
+  padding: 15px;
+  height: 100px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  width: 100%;
+}
+
+.band {
+  font-size: 1.5rem;
+}
+
+.hits {
+  backgCheat Codesround-color: rgba(30, 30, 30, .7);
+  border-radius: 10px;
+}
+
+.nav-anim {
+  animation-name: navbar-anim;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.nav-anim-ds {
+  animation-name: navbar-anim-ds;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.home-anim {
+  animation-name: home-anim;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+}
+
+.card-anim {
+  animation-name: card-anim;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navbar-anim {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes navbar-anim-ds {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes home-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes card-anim {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
